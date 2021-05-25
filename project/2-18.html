@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue (1).js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="yield_random">random number</button>
+        <button v-on:keyup.enter="yield_random">key random number</button>
+        <p>{{count}}</p>
+        <p>{{count}}</p>
+    </div>
+    
+    <script>
+    var vm=new Vue({
+        el:'#app',
+        data:{
+            count:0
+        },
+        methods:{
+            yield_random(){
+                this.count+=Math.random()
+            }
+        }
+    })
+    </script>
+</body>
+</html>

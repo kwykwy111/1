@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <style>
+        body{
+            background: url(./images/5.jpg);
+            background-size: cover;
+            padding-top: 20 px;
+        }
+        input{
+            display: block;
+            width: 276px;
+            height: 48px;
+            border: 1px solid rgb(238, 157, 188);
+            border-radius: 6px;
+            font-size: 18px;
+            font-family: 'Source Sans Pro',sans-serif;
+            color: rgb(223, 106, 170);
+            padding-left: 45px;
+            padding-right: 20px;
+            margin-bottom: 20px;
+            background:pink no-repeat 16px 16px;
+        }
+        form{
+            width: 343px;
+            height: 500px;
+            border: 1px solid burlywood;
+            border-radius: 5px;
+            background:palevioletred;
+            padding: 30px;
+            margin: 0 auto;
+            box-shadow: 0 0 13px powderblue;
+        
+        }
+        .login_picture{
+            width: 200px;
+            height: 200px;
+            background: url(./1.jpg);
+            margin: 5px auto;
+            border: 5px solid wheat;
+            border-radius: 200px;
+        }
+    
+        input[type=submit]{
+            cursor: pointer;
+        }
+        
+        input:focus{
+            background-color: rgb(245, 189, 215);
+            box-shadow:0 0 5px 1px crimson;
+            overflow: hidden;
+        }
+        .btn{
+            /* cursor: pointer; */
+            widows: 138px;
+            height:44px;
+            margin:0 auto;
+            border-radius: 4px;
+            background: aqua;
+            color:aquamarine;
+            padding: 10.5px 21px;
+        }
+    
+        .btn:active{
+            margin-top: 20px;
+            border:1px solid burlywood;
+            text-shadow: crimson;
+            background: cyan;
+            color: darkorchid;
+        }
+
+    </style>       
+</head>
+<body>
+        <form>
+            <input type="text" name="name" placeholder="用户名">
+            <input type="passwd" name="passwd" placeholder="密码">
+            <input type="submit" name="submit" value="登录">
+            <div class="login_picture"></div>
+        </form> 
+     
+</body>
+</html>

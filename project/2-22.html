@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue (1).js"></script>
+    <style>
+      .Odiv1{
+          width:80px;
+          height:80px;
+          background: pink;
+          margin: 5px;
+      }
+      .Odiv2{
+          widows: 50px;
+          height:50px;
+          background: plum;
+      }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div v-on:click.capture="doParent">
+            <button v-on:click="doThis">event bubble</button>
+            <button v-on:click.stop="doThis">stop event bubble</button>
+        </div>
+    </div>
+
+    <div v-on:click.capture="doParent">
+        <button v-on:click="doThis">event capture</button>
+    </div>
+
+    <button v-on:click.once="doThis">Only once</button>
+
+    <a href="http://www.baidu.com">baidu</a>
+    <a href="http://www.baidu.com" v-on:click.prevent>baidu</a>
+
+    <script>
+    var vm = new Vue ({
+        el: '#app',
+        methods:{
+            doParent () {
+                console.log('I am parent click event')
+            },
+            doThis (){
+                console.log('I am this click event')
+            }
+        }
+    })
+    </script>
+</body>
+</html>
